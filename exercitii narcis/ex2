@@ -1,0 +1,39 @@
+ class contbancar {
+     private double sold;
+    public contbancar() {
+        this.sold = 0;
+
+    }
+     public void depunere(double suma) {
+         if (suma>0){
+             sold += suma;
+             System.out.println(" ai depus "+ suma + "ron");
+         }else {
+             System.out.println(" suma trebuie sa fire pozitiva");
+         }
+     }
+
+     public void retragere(double suma) {
+         if (suma>sold){
+             System.out.println(" fonduri insuficiente ");
+         }else if(suma<=0){
+             System.out.println(" suma trebuie sa fie mai mare ca 0");
+         }else {
+             sold -= suma;
+             System.out.println("ai retras "+suma+" ron");
+         }
+     }
+
+     public void verificaSold() {
+         System.out.println("Soldul curent este: " + sold + " RON.");
+     }
+     public static void main(String[] args) {
+         contbancar c = new contbancar();
+
+         c.verificaSold();
+         c.depunere(500);
+         c.retragere(200);
+         c.retragere(400);
+         c.verificaSold();
+     }
+ }

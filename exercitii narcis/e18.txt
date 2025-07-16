@@ -1,0 +1,27 @@
+class Angajat {
+    public void afiseazaFunctie() {
+        System.out.println("Angajat generic");
+    }
+}
+class Programator extends Angajat {
+    public void afiseazaFunctie() {
+        System.out.println("Programator");
+    }
+}
+class Tester extends Angajat {
+    public void afiseazaFunctie() {
+        System.out.println("Tester");
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Angajat[] angajati = new Angajat[3];
+        angajati[0] = new Programator();
+        angajati[1] = new Tester();
+        angajati[2] = new Angajat();
+
+        for (Angajat a : angajati) {
+            a.afiseazaFunctie();
+        }
+    }
+}

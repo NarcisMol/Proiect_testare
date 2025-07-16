@@ -1,0 +1,24 @@
+ class factura {
+     String nrfactura;
+     double valoare;
+     String data;
+
+
+    public factura(String nrfactura, double valoare, String data) {
+        this.nrfactura = nrfactura;
+        this.valoare = valoare;
+        this.data = data;
+
+    }
+     public void afiseazafactura() {
+         System.out.println("Număr Factură: " + nrfactura);
+         System.out.println("Valoare: " + valoare + " RON");
+         System.out.println("Data: " + data);
+     }
+        public static void main(String[] args) {
+            factura f = new factura("F001", 250.75, "2025-07-14");
+            f.afiseazafactura();
+        }
+}
+
+

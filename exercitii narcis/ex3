@@ -1,0 +1,32 @@
+ class angajat {
+     String nume;
+     String functie;
+     Double salariu;
+
+    public angajat(String nume, String functie, double salariu) {
+        this.nume = nume;
+        this.functie = functie;
+        this.salariu = salariu;
+    }
+     public void bonus() {
+        double bonus;
+
+         if (functie.equalsIgnoreCase("Manager")) {
+             bonus = salariu * 0.10;
+         } else {
+             bonus = salariu * 0.05;
+         }
+         double salariuTotal = salariu + bonus;
+
+         System.out.println("Angajat: " + nume);
+         System.out.println("Funcție: " + functie);
+         System.out.println("Salariu de bază: " + salariu + " RON");
+         System.out.println("Bonus: " + bonus + " RON");
+         System.out.println("Salariu total: " + salariuTotal + " RON");
+     }
+
+     public static void main(String[] args) {
+         angajat a1 = new angajat("andrei", "manager", 6000);
+         a1.bonus();
+     }
+ }

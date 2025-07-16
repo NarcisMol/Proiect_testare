@@ -1,0 +1,22 @@
+public class Main {
+    public static void main(String[] args) {
+        System.out.println(verificaCategorieVarsta(10)); 
+        System.out.println(verificaCategorieVarsta(15));
+        System.out.println(verificaCategorieVarsta(30));
+        System.out.println(verificaCategorieVarsta(70));
+    }
+
+    public static String verificaCategorieVarsta(int varsta) {
+        if (varsta >= 0 && varsta <= 12) {
+            return "Copil";
+        } else if (varsta >= 13 && varsta <= 17) {
+            return "Adolescent";
+        } else if (varsta >= 18 && varsta <= 64) {
+            return "Adult";
+        } else if (varsta >= 65) {
+            return "Senior";
+        } else {
+            return "Vârstă invalidă";
+        }
+    }
+}

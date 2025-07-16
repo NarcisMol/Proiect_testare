@@ -1,0 +1,28 @@
+class RezervareHotel {
+    private String numeClient;
+    private String tipCamera;
+
+    public RezervareHotel(String numeClient) {
+        this.numeClient = numeClient;
+        this.tipCamera = "Standard";
+        afiseazaDetalii();
+    }
+
+    public RezervareHotel(String numeClient, String tipCamera) {
+        this.numeClient = numeClient;
+        this.tipCamera = tipCamera;
+        afiseazaDetalii();
+    }
+
+    private void afiseazaDetalii() {
+        System.out.println("Rezervare realizată pentru: " + numeClient);
+        System.out.println("Tip cameră: " + tipCamera);
+        System.out.println("-------------------------");
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        RezervareHotel rezervare1 = new RezervareHotel("Maria Pop");
+        RezervareHotel rezervare2 = new RezervareHotel("Ion Ionescu", "Deluxe");
+    }
+}

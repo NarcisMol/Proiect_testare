@@ -1,0 +1,16 @@
+class contor {
+     int totalobiecte=0;
+
+    public contor() {
+         totalobiecte++;
+    }
+
+    public int gettotalobiecte() {
+        return totalobiecte;
+    }
+    public static void main(String[] args) {
+        contor c1=new contor();
+        contor c2=new contor();
+        contor c3=new contor();
+    }
+}

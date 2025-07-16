@@ -1,0 +1,32 @@
+class Animal {
+    public void faceSunet() {
+        System.out.println("Animal face un sunet...");
+    }
+}
+
+class Caine extends Animal {
+    @Override
+    public void faceSunet() {
+        System.out.println("Ham Ham!");
+    }
+}
+
+class Pisica extends Animal {
+    @Override
+    public void faceSunet() {
+        System.out.println("Miau Miau!");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Animal[] animale = new Animal[3];
+        animale[0] = new Caine();
+        animale[1] = new Pisica();
+        animale[2] = new Animal();
+
+        for (Animal a : animale) {
+            a.faceSunet();
+        }
+    }
+}

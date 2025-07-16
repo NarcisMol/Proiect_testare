@@ -1,0 +1,27 @@
+class Vehicul {
+    int vitezaMaxima;
+
+    public Vehicul(int vitezaMaxima) {
+        this.vitezaMaxima = vitezaMaxima;
+    }
+}
+
+class Masina extends Vehicul {
+    private String marca;
+
+    public Masina(int vitezaMaxima, String marca) {
+        super(vitezaMaxima);
+        this.marca = marca;
+    }
+
+    public void afiseazaDetalii() {
+        System.out.println("Marca: " + marca + ", Viteza maxima: " + vitezaMaxima);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Masina masina = new Masina(220, "Toyota");
+        masina.afiseazaDetalii();
+    }
+}

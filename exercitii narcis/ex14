@@ -1,0 +1,25 @@
+public class Main {
+    public static void main(String[] args) {
+        int[] valori = {3, -1, 0, 5, -7, 8};
+        double media = mediaPozitivelor(valori);
+        System.out.println("Media numerelor pozitive este: " + media);
+    }
+
+    public static double mediaPozitivelor(int[] valori) {
+        int suma = 0;
+        int count = 0;
+
+        for (int val : valori) {
+            if (val > 0) {
+                suma += val;
+                count++;
+            }
+        }
+
+        if (count == 0) {
+            return 0;
+        }
+
+        return (double) suma / count;
+    }
+}

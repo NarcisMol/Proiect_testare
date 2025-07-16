@@ -1,0 +1,19 @@
+public class Main {
+    public static void main(String[] args) {
+        int[] valori = {2, 5, 8, 7, 10, 3};
+        int suma = sumaPare(valori);
+        System.out.println("Suma numerelor pare este: " + suma);
+    }
+
+    public static int sumaPare(int[] numere) {
+        int suma = 0;
+
+        for (int i = 0; i < numere.length; i++) {
+            if (numere[i] % 2 == 0) {
+                suma += numere[i];
+            }
+        }
+
+        return suma;
+    }
+}

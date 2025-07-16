@@ -1,0 +1,15 @@
+class produs {
+     final String codprodus;
+
+    public produs(final String codprodus) {
+        this.codprodus= codprodus;
+    }
+
+    public void afiseazaDetalii() {
+        System.out.println("cod produs: " + codprodus);
+    }
+    public static void main(String[] args) {
+        produs p= new produs("1234");
+        p.afiseazaDetalii();
+    }
+}
